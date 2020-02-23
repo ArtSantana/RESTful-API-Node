@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const database = require("nedb");
 require('dotenv/config');
+app.use(express.json());
 // Server port
 app.listen(process.env.PORT, () => console.log(`Server up at:${process.env.PORT}`));
 // Import Routes
