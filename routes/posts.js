@@ -5,10 +5,13 @@ router.get('/', (request, response) => {
     response.send('Posts page');
 })
 
-router.post('/', (Request, Response) => {
-    console.log(Request.body);
-    Response.send(Request.body);
+router.get('/pathTest', (request, response) => {
+    response.send('Path test');
 })
 
+router.post('/', (request, response) => {
+    console.log(request.body);
+    response.send(request.body);
+})
 
 module.exports = router;
